@@ -9,4 +9,8 @@ namespace BigSchool.DTOs
     {
         public int courseId { get; set; }
     }
+    public class FollowingDto
+    {
+        public string FolloweeId { get; set; }
+    }
 }

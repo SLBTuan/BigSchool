@@ -1,0 +1,31 @@
+﻿@model IEnumerable<BigSchool.Models.Course>
+@{
+    ViewBag.Title = "Mine";
+}
+
+<h2>Mine</h2>
+<div class="row">
+    <ul class="course">
+        @foreach (var item in Model.UpcommingCourse)
+        {
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @item.DateTime.ToString("MM")
+                    </div>
+                    <div class="day">
+                        @item.DateTime.ToString("dd")
+                    </div>
+                </div>
+                <div class="details">
+                    <span class="lecturer">
+                        @item.Lecturer.Name
+                    </span>
+                    <span class="category">
+                        @item.Category.Name
+                    </span>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
